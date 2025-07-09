@@ -3,9 +3,67 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <title>Главная</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<style>
+    .row {
+      display: flex;
+    }
+    .col-2 {
+      height: 100vh; /* Левая колонка на всю высоту */
+      display: flex;
+      flex-direction: column;
+      background-color: #343a40;
+      color: white;
+    }
+    .navbar-nav {
+      flex-grow: 1;
+    }
+    .user-section {
+      margin-top: auto;
+      padding: 10px;
+      background-color: #444;
+    }
+</style>
+
+<div class="row">
+    <div class="col-2">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
+                         class="d-inline-block align-text-top">
+                    Меню
+                </a>
+            </div>
+        </nav>
+        <nav class="navbar navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Категории</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Заказы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-section">
+            <p>Пользователь</p>
+        </div>
+    </div>
+    <div class="col">
+        <!-- Контент правой части страницы -->
+        <h1>Главная</h1>
+        <!-- Добавь здесь карточки товаров и другой контент -->
+    </div>
+</div>
 </body>
 </html>
