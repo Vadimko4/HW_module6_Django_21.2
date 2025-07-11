@@ -13,9 +13,7 @@
         margin: 0;     /* Убираем стандартные отступы */
         overflow: hidden; /* Скрываем скролл всего документа */
     }
-    .row {
-      display: flex;
-    }
+
     .col-2 {
       height: 100vh; /* Левая колонка на всю высоту */
       display: flex;
@@ -126,7 +124,7 @@
             }
 
             .dropdown-item:hover {
-                background-color: white; /* Цвет при наведении 495057*/
+                background-color: white; /* Цвет при наведении */
             }
         </style>
         <div class="user-menu">
@@ -143,10 +141,62 @@
             </div>
         </div>
     </div>
-    <div class="col">
-        <!-- Контент правой части страницы -->
-        <h1>Главная</h1>
-        <!-- Добавь здесь карточки товаров и другой контент -->
+    <!-- Контент правой части страницы -->
+    <div class="col-10">
+        <!--Заголовок правой части страницы-->
+        <div class="mt-5">
+            <h1 align="center">Главная</h1>
+            <div class="mt-1">
+                <p style="color: grey; text-align: center">Вы находитесь на сайте, предназначенном для продажи
+                    товаров</p>
+            </div>
+        </div>
+        <!-- Карточки товаров -->
+        <div class="row">
+            <!-- Первая карточка -->
+            <div class="col-4">
+                <div class="card mt-3 mx-5">
+                    <div class="card-header" align="center">
+                        <h4>Товар 1</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title" align="center">$ 100</h2>
+                        <p class="card-text" align="justify">10 users included, 2 GB of storage, Email support, Help
+                            center access</p>
+                        <a href="#" class="btn btn-primary" style="width: 100%">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Вторая карточка -->
+            <div class="col-4">
+                <div class="card mt-3 mx-5">
+                    <div class="card-header" align="center">
+                        <h4>Товар 2</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title" align="center">$ 150</h2>
+                        <p class="card-text" align="justify">15 users included, 3 GB of storage, Email support, Help
+                            center access</p>
+                        <a href="#" class="btn btn-primary" style="width: 100%">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Третья карточка -->
+            <div class="col-4">
+                <div class="card mt-3 mx-5">
+                    <div class="card-header" align="center">
+                        <h4>Товар 3</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title" align="center">$ 200</h2>
+                        <p class="card-text" align="justify">20 users included, 4 GB of storage, Email support,
+                            Help
+                            center access</p>
+                        <a href="#" class="btn btn-primary" style="width: 100%">Купить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Подключение локальных скриптов перед закрывающим тегом body -->
