@@ -21,42 +21,122 @@
     .navbar-nav {
       flex-grow: 1;
     }
-    .user-section {
-      margin-top: auto;
-      padding: 10px;
-      background-color: #444;
-    }
 </style>
 
 <div class="row">
     <div class="col-2">
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="../docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
-                         class="d-inline-block align-text-top">
-                    Меню
-                </a>
-            </div>
-        </nav>
+        <style>
+            .menu-header {
+              border-bottom: 1px solid #ccc; /* Серый цвет линии */
+              padding-bottom: 10px;
+              display: flex;
+              align-items: center;
+              margin-top: 10px; /* Отступ сверху */
+            }
+            .menu-header img {
+                filter: invert(1);
+                margin-right: 10px; /* Отступ между иконкой и текстом */
+                margin-left: 10px
+            }
+        </style>
+        <div class="menu-header">
+            <img src="../img/bootstrap-logo-black.svg" alt="Logo" width="30" height="24"
+                 class="d-inline-block align-text-top">
+            <span>Меню</span>
+        </div>
+        <style>
+            .navbar-nav .nav-link {
+              color: white;
+              display: flex;
+              align-items: center;
+              padding: 10px; /* Добавляем отступы для большей области клика */
+              border-radius: 5px; /* Закругляем углы */
+              transition: background-color 0.3s ease; /* Плавный переход */
+            }
+            .navbar-nav .nav-link:hover {
+              background-color: blue; /* Задний фон при наведении */
+              color: white; /* Цвет текста остаётся белым */
+            }
+            .nav-link img {
+              filter: invert(1);
+              margin-right: 10px;
+              margin-top: 3px;
+            }
+        </style>
+        </style>
         <nav class="navbar navbar-dark">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Главная</a>
+                    <a class="nav-link" href="#">
+                        <img src="../img/house-door.svg" alt="icon" width="16" height="16" fill="white"
+                             class="d-inline-block align-text-top">
+                        Главная
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Категории</a>
+                    <a class="nav-link" href="#">
+                        <img src="../img/speedometer2.svg" alt="icon" width="16" height="16"
+                             class="d-inline-block align-text-top">
+                        Категории
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Заказы</a>
+                    <a class="nav-link" href="#">
+                        <img src="../img/table.svg" alt="icon" width="16" height="16"
+                             class="d-inline-block align-text-top">
+                        Заказы
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Контакты</a>
+                    <a class="nav-link" href="#">
+                        <img src="../img/person-circle.svg" alt="icon" width="16" height="16"
+                             class="d-inline-block align-text-top">
+                        Контакты
+                    </a>
                 </li>
             </ul>
         </nav>
-        <div class="user-section">
-            <p>Пользователь</p>
+        <style>
+            .user-menu {
+              margin-top: auto;
+              padding: 10px;
+
+              border-top: 1px solid #ccc; /* Горизонтальная черта */
+              padding-top: 10px;
+              margin-top: 10px; /* Отступ сверху для визуального разделения */
+              color: white;
+            }
+            .btn-secondary {
+                background-color: #343a40; /* Темный фон для кнопки */
+                color: white; /* Белый текст */
+                border: none; /* Убираем границу */
+            }
+
+            .dropdown-menu {
+                background-color: #343a40; /* Темный фон для меню */
+                border: none; /* Убираем границу */
+            }
+
+            .dropdown-item {
+                color: white;
+            }
+
+            .dropdown-item:hover {
+                background-color: #495057; /* Цвет при наведении */
+            }
+        </style>
+        <div class="user-menu">
+
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    Пользователь
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Профиль</a></li>
+                    <li><a class="dropdown-item" href="#">Выход</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="col">
@@ -65,5 +145,7 @@
         <!-- Добавь здесь карточки товаров и другой контент -->
     </div>
 </div>
+<!-- Подключение локальных скриптов перед закрывающим тегом body -->
+<script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
