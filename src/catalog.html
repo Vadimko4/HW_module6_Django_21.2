@@ -149,23 +149,123 @@
         </div>
         <!-- Карточки товаров -->
         <div class="row">
+            <!--Стиль для изображений на карточках товаров-->
+            <style>
+                <!-- Стили для того, чтобы изображение было по центру карточки-->
+                .image-container {  /* Контейнер для изображения */
+                    display: flex;
+                    justify-content: center; /* Горизонтально центрировать */
+                    width: 100%; /* Заставляет контейнер занять всю ширину */
+                 }
+
+                .card-img {
+                <!---->
+                   width: auto; /* Ширина по содержимому */
+                   height: 100px; /* Фиксированная высота (настраиваем по необходимости) */
+                   object-fit: contain; /* Сохраняет пропорции */
+                }
+
+                <!--Стили, чтобы на последней строчке карточки были кнопки и надпись справа-->
+                .my-card-body {
+                  display: flex;
+                  flex-direction: column;
+                }
+
+                .d-flex {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  width: 100%;
+                }
+
+                .text-muted {
+                  margin-left: auto;
+                }
+
+            </style>
             <!-- Первая карточка -->
             <div class="col-6">
-                <div class="card mt-3 mx-5" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-<!--                        <h5 class="card-title">Card title</h5>-->
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
-                        <a href="#" class="btn btn-primary">View</a>
-                        <a href="#" class="btn btn-primary">Edit</a>
+                <div class="card mt-3 mx-5">
+                    <div class="image-container">
+                        <img src="../img/товар2.jpg" alt="изображение товара" class="card-img">
+                    </div>
+                    <div class="card-body my-card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.
+                            This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Вторая карточка -->
+            <div class="col-6">
+                <div class="card mt-3 mx-5">
+                    <div class="image-container">
+                        <img src="../img/product_img.jpg" alt="изображение товара" class="card-img">
+                    </div>
+                    <div class="card-body my-card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.
+                            This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Третья карточка -->
+            <div class="col-6">
+                <div class="card mt-3 mx-5">
+                    <div class="image-container">
+                        <img src="../img/product_img.jpg" alt="изображение товара" class="card-img">
+                    </div>
+                    <div class="card-body my-card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.
+                            This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Четвёртая карточка -->
+            <div class="col-6">
+                <div class="card mt-3 mx-5">
+                    <div class="image-container">
+                        <img src="../img/товар2.jpg" alt="изображение товара" class="card-img">
+                    </div>
+                    <div class="card-body my-card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.
+                            This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Подключение локальных скриптов перед закрывающим тегом body -->
-<script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Подключение локальных скриптов перед закрывающим тегом body -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
