@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+    html, body {
+        height: 100%;  /* Нужно для вертикального растяжения */
+        margin: 0;     /* Убираем стандартные отступы */
+        overflow: hidden; /* Скрываем скролл всего документа */
+    }
+
+    .col-2 {
+      height: 100vh; /* Левая колонка на всю высоту */
+      display: flex;
+      flex-direction: column;
+      background-color: #343a40;
+      color: white;
+    }
+    .navbar-nav {
+      flex-grow: 1;
+    }
+</style>
+
+<div class="row">
+    <div class="col-2">
+        <style>
+            .menu-header {
+              border-bottom: 1px solid #ccc; /* Серый цвет линии */
+              padding-bottom: 10px;
+              display: flex;
+              align-items: center;
+              margin-top: 10px; /* Отступ сверху */
+            }
+            .menu-header img {
+                filter: invert(1);
+                margin-right: 10px; /* Отступ между иконкой и текстом */
+                margin-left: 10px
+            }
+        </style>
+        <div class="menu-header">
+            <img src="../img/bootstrap-logo-black.svg" alt="Logo" width="30" height="24"
+                 class="d-inline-block align-text-top">
+            <span>Меню</span>
+        </div>
+        <style>
+            .navbar-nav .nav-link {
+              color: white;
+              display: flex;
+              align-items: center;
+              padding: 10px; /* Добавляем отступы для большей области клика */
+              border-radius: 5px; /* Закругляем углы */
+              transition: background-color 0.3s ease; /* Плавный переход */
+            }
+            .navbar-nav .nav-link:hover {
+              background-color: blue; /* Задний фон при наведении */
+              color: white; /* Цвет текста остаётся белым */
+            }
+            .nav-link img {
+              filter: invert(1);
+              margin-right: 10px;
+              margin-top: 3px;
+            }
+        </style>
+        <nav class="navbar navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <img src="../img/house-door.svg" alt="icon" width="16" height="16" fill="white"
+                             class="d-inline-block align-text-top">
+                        Главная
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="category.html">
+                        <img src="../img/speedometer2.svg" alt="icon" width="16" height="16"
+                             class="d-inline-block align-text-top">
+                        Категории
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="catalog.html">
+                        <img src="../img/table.svg" alt="icon" width="16" height="16"
+                             class="d-inline-block align-text-top">
+                        Заказы
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">
+                        <img src="../img/person-circle.svg" alt="icon" width="16" height="16"
+                             class="d-inline-block align-text-top">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <style>
+            .user-menu {
+              margin-top: auto; /* Автоматический отступ сверху прижимает вниз */
+              padding: 10px;
+
+              border-top: 1px solid #ccc; /* Горизонтальная черта */
+              padding-top: 10px;
+
+              color: white;
+            }
+            .btn-secondary {
+                background-color: #343a40; /* Темный фон для кнопки */
+                color: white; /* Белый текст */
+                border: none; /* Убираем границу */
+            }
+
+            .dropdown-menu {
+                background-color: #495057; /* Серый фон для меню #343a40*/
+                border: none; /* Убираем границу */
+            }
+
+            .dropdown-item {
+                color: white;
+            }
+
+            .dropdown-item:hover {
+                background-color: white; /* Цвет при наведении */
+            }
+        </style>
+        <div class="user-menu">
+
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    Пользователь
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Профиль</a></li>
+                    <li><a class="dropdown-item" href="#">Выход</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Контент правой части страницы -->
+    <div class="col-10">
+        <!--Заголовок правой части страницы-->
+        <div class="mt-5">
+            <h1 align="center">Главная</h1>
+            <div class="mt-1">
+                <p style="color: grey; text-align: center">Вы находитесь на сайте, предназначенном для продажи
+                    товаров</p>
+            </div>
+        </div>
+        <!-- Карточки товаров -->
+        <div class="row">
+            <!--Стиль для кнопок на главной странице-->
+            <style>
+                .my-btn-primary{
+                    width: 100%;
+                    background-color: white;
+                    color: blue
+                }
+            </style>
+            <!-- Первая карточка -->
+            <div class="col-4">
+                <div class="card mt-3 mx-5">
+                    <div class="card-header" align="center">
+                        <h4>Товар 1</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title" align="center">$ 100</h2>
+                        <p class="card-text" align="justify">10 users included, 2 GB of storage, Email support, Help
+                            center access</p>
+                        <a href="#" class="btn btn-primary my-btn-primary">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Вторая карточка -->
+            <div class="col-4">
+                <div class="card mt-3 mx-5">
+                    <div class="card-header" align="center">
+                        <h4>Товар 2</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title" align="center">$ 150</h2>
+                        <p class="card-text" align="justify">15 users included, 3 GB of storage, Email support, Help
+                            center access</p>
+                        <a href="#" class="btn btn-primary  my-btn-primary">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Третья карточка -->
+            <div class="col-4">
+                <div class="card mt-3 mx-5">
+                    <div class="card-header" align="center">
+                        <h4>Товар 3</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title" align="center">$ 200</h2>
+                        <p class="card-text" align="justify">20 users included, 4 GB of storage, Email support,
+                            Help
+                            center access</p>
+                        <a href="#" class="btn btn-primary my-btn-primary">Купить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Подключение локальных скриптов перед закрывающим тегом body -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакты</title>
+    <!--    <link href="../css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+<style>
+    html, body {
+        height: 100%;  /* Нужно для вертикального растяжения */
+        margin: 0;     /* Убираем стандартные отступы */
+        overflow: hidden; /* Скрываем скролл всего документа */
+    }
+
+    .col-2 {
+      height: 100vh; /* Левая колонка на всю высоту */
+      display: flex;
+      flex-direction: column;
+      background-color: #343a40;
+      color: white;
+    }
+    .navbar-nav {
+      flex-grow: 1;
+    }
+</style>
+
+<div class="row">
+    <div class="col-2">
+        <style>
+            .menu-header {
+              border-bottom: 1px solid #ccc; /* Серый цвет линии */
+              padding-bottom: 10px;
+              display: flex;
+              align-items: center;
+              margin-top: 10px; /* Отступ сверху */
+            }
+            .menu-header img {
+                filter: invert(1);
+                margin-right: 10px; /* Отступ между иконкой и текстом */
+                margin-left: 10px
+            }
+        </style>
+        <div class="menu-header">
+            <img src="https://raw.githubusercontent.com/Vadimko4/HW_module6_Django_21.2/refs/heads/feature/hw_21.2/img/bootstrap-logo-black.svg" alt="Logo" width="30" height="24"
+                 class="d-inline-block align-text-top">
+            <span>Меню</span>
+        </div>
+        <style>
+            .navbar-nav .nav-link {
+              color: white;
+              display: flex;
+              align-items: center;
+              padding: 10px; /* Добавляем отступы для большей области клика */
+              border-radius: 5px; /* Закругляем углы */
+              transition: background-color 0.3s ease; /* Плавный переход */
+            }
+            .navbar-nav .nav-link:hover {
+              background-color: blue; /* Задний фон при наведении */
+              color: white; /* Цвет текста остаётся белым */
+            }
+            .nav-link img {
+              filter: invert(1);
+              margin-right: 10px;
+              margin-top: 3px;
+            }
+        </style>
+        <nav class="navbar navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <img src="https://raw.githubusercontent.com/Vadimko4/HW_module6_Django_21.2/refs/heads/feature/hw_21.2/img/house-door.svg" alt="icon" width="16" height="16" fill="white"
+                             class="d-inline-block align-text-top">
+                        Главная
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="category.html">
+                        <img src="https://raw.githubusercontent.com/Vadimko4/HW_module6_Django_21.2/refs/heads/feature/hw_21.2/img/speedometer2.svg" alt="icon" width="16" height="16"
+                             class="d-inline-block align-text-top">
+                        Категории
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="catalog.html">
+                        <img src="https://raw.githubusercontent.com/Vadimko4/HW_module6_Django_21.2/refs/heads/feature/hw_21.2/img/table.svg" alt="icon" width="16" height="16"
+                             class="d-inline-block align-text-top">
+                        Заказы
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">
+                        <img src="https://raw.githubusercontent.com/Vadimko4/HW_module6_Django_21.2/refs/heads/feature/hw_21.2/img/person-circle.svg" alt="icon" width="16" height="16"
+                             class="d-inline-block align-text-top">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <style>
+            .user-menu {
+              margin-top: auto; /* Автоматический отступ сверху прижимает вниз */
+              padding: 10px;
+
+              border-top: 1px solid #ccc; /* Горизонтальная черта */
+              padding-top: 10px;
+
+              color: white;
+            }
+            .btn-secondary {
+                background-color: #343a40; /* Темный фон для кнопки */
+                color: white; /* Белый текст */
+                border: none; /* Убираем границу */
+            }
+
+            .dropdown-menu {
+                background-color: #495057; /* Серый фон для меню #343a40*/
+                border: none; /* Убираем границу */
+            }
+
+            .dropdown-item {
+                color: white;
+            }
+
+            .dropdown-item:hover {
+                background-color: white; /* Цвет при наведении */
+            }
+        </style>
+        <div class="user-menu">
+
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    Пользователь
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Профиль</a></li>
+                    <li><a class="dropdown-item" href="#">Выход</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Контент правой части страницы -->
+    <div class="col-10">
+        <!--Заголовок правой части страницы-->
+        <div class="my-5">
+            <h1 align="center">Контакты</h1>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <!-- Форма для обратной связи -->
+            <div class="col-4 mx-5">
+                <form class="border p-3" style="border-radius: 5px;">
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="exampleInputName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Почта</label>
+                        <div class="input-group">
+                            <span class="input-group-text">@</span>
+                            <input type="email" class="form-control form-control-sm" id="inputEmail">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+            <!-- Наши контакты -->
+            <div class="col-4">
+                <h4>Наши контакты</h4>
+                <p style="text-align: justify;">
+                    Lorern ipsum dolor it arnet, consectetur adipiscing elit, sed do eiusrnod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostril(' exercitation ullamco Lsboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute Irure dolor in reprehenderit in voluptate vat
+                    esse cilium dolore eu fugiat nulls pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui of ficia deserunt mollit anim id est laborum.<br>
+                    <br>
+                    While these feedback styles cannot be styled with CSS, you can still customize the feedback text
+                    through JavaScript.
+                </p>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Подключение локальных скриптов перед закрывающим тегом body -->
+<!--<script src="../js/bootstrap.bundle.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+</body>
+</html>
